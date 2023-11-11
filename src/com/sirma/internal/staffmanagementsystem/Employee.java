@@ -11,7 +11,14 @@ public class Employee {
     private String role;
     private double salary;
 
-    public Employee(String[] fields) {
+    public Employee(long id, String name, LocalDate startDate, LocalDate endDate, Department department, String role, double salary) {
+        Id = id;
+        this.name = name;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.department = department;
+        this.role = role;
+        this.salary = salary;
     }
 
     public long getId() {
@@ -68,5 +75,10 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString(){
+        return name + " " + Id + " " + startDate + " " + endDate + " " + department + " " + role + " " + salary;
     }
 }
