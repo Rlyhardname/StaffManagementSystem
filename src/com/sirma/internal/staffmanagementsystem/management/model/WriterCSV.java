@@ -1,4 +1,6 @@
-package com.sirma.internal.staffmanagementsystem;
+package com.sirma.internal.staffmanagementsystem.management.model;
+
+import com.sirma.internal.staffmanagementsystem.management.interfaces.CustomWriter;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

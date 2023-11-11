@@ -1,4 +1,7 @@
-package com.sirma.internal.staffmanagementsystem;
+package com.sirma.internal.staffmanagementsystem.management.model;
+
+import com.sirma.internal.staffmanagementsystem.management.enums.Department;
+import com.sirma.internal.staffmanagementsystem.management.interfaces.CustomReader;
 
 import java.io.BufferedReader;
 import java.io.IOException;

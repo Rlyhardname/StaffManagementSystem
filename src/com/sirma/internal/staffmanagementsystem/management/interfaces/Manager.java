@@ -1,6 +1,7 @@
-package com.sirma.internal.staffmanagementsystem;
+package com.sirma.internal.staffmanagementsystem.management.interfaces;
 
-import java.util.List;
+import com.sirma.internal.staffmanagementsystem.management.model.Employee;
+
 import java.util.Scanner;
 
 public interface Manager {

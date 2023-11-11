@@ -1,4 +1,9 @@
-package com.sirma.internal.staffmanagementsystem;
+package com.sirma.internal.staffmanagementsystem.management.model;
+
+import com.sirma.internal.staffmanagementsystem.management.enums.Department;
+import com.sirma.internal.staffmanagementsystem.management.exceptions.CorruptedDataException;
+import com.sirma.internal.staffmanagementsystem.management.interfaces.Manager;
+import com.sirma.internal.staffmanagementsystem.management.interfaces.Service;
 
 import java.util.Iterator;
 import java.util.List;

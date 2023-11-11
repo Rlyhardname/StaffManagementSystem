@@ -1,4 +1,9 @@
-package com.sirma.internal.staffmanagementsystem;
+package com.sirma.internal.staffmanagementsystem.management.model;
+
+import com.sirma.internal.staffmanagementsystem.management.enums.Department;
+import com.sirma.internal.staffmanagementsystem.management.interfaces.CustomReader;
+import com.sirma.internal.staffmanagementsystem.management.interfaces.CustomWriter;
+import com.sirma.internal.staffmanagementsystem.management.interfaces.Service;
 
 public class StaffService implements Service {
     private final CustomReader reader;

@@ -1,4 +1,6 @@
-package com.sirma.internal.staffmanagementsystem;
+package com.sirma.internal.staffmanagementsystem.management.model;
+
+import com.sirma.internal.staffmanagementsystem.management.enums.Department;
 
 import java.time.LocalDate;
 
@@ -78,7 +80,7 @@ public class Employee {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return name + " " + Id + " " + startDate + " " + endDate + " " + department + " " + role + " " + salary;
     }
 }
