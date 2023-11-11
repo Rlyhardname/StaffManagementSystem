@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class ReaderSCV implements CustomReader {
+public class ReaderCSV implements CustomReader {
 
     @Override
     public List<Employee> read(String uri) {
