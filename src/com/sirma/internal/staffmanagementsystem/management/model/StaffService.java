@@ -30,7 +30,7 @@ public class StaffService implements Service {
     }
 
     @Override
-    public Employee search(int id) {
+    public Employee search(long id) {
         return null;
     }
 

@@ -4,6 +4,7 @@ import com.sirma.internal.staffmanagementsystem.management.enums.Department;
 import com.sirma.internal.staffmanagementsystem.management.exceptions.CorruptedDataException;
 import com.sirma.internal.staffmanagementsystem.management.interfaces.Manager;
 import com.sirma.internal.staffmanagementsystem.management.interfaces.Service;
+import com.sirma.internal.staffmanagementsystem.management.util.EmpUtil;
 
 import java.util.Iterator;
 import java.util.List;
@@ -48,7 +49,7 @@ public class StaffManager implements Manager {
     }
 
     @Override
-    public void editEmployee(int id, Scanner sc) {
+    public void editEmployee(long id, Scanner sc) {
         for (Employee item : employees) {
             if (item.getId() == id) {
                 System.out.println("Write 'd' for department, 'r' for role, 's' for salary");
@@ -79,7 +80,7 @@ public class StaffManager implements Manager {
     }
 
     @Override
-    public void fireEmployee(int id) {
+    public void fireEmployee(long id) {
         Iterator<Employee> iter = employees.iterator();
         while (iter.hasNext()) {
             Employee emp = iter.next();
@@ -97,19 +98,50 @@ public class StaffManager implements Manager {
         }
     }
 
+    @Override
+    public void execute(String command, Scanner sc) {
+        switch (command.toLowerCase()) {
+            case "add":
+                System.out.println("Input id, name, startDate(yyyy/mm/dd), endDate(yyyy/mm/dd), department, " +
+                        "Departments are as follows:%nFinance(f)%n\" +\n" +
+                        "                                \"Strategic_business(s), IT(i), Logistics(l), Customer_Support(c)\", role, salary");
+                String[] data = sc.nextLine().split(",");
+                Employee addEmployee = EmpUtil.parseEntry(data);
+                add(addEmployee);
+                break;
+            case "list":
+                listEmployees();
+                break;
+            case "fire":
+                long id = Long.parseLong(sc.nextLine());
+                fireEmployee(id);
+                break;
+            case "edit":
+                long id1 = Long.parseLong(sc.nextLine());
+                editEmployee((id1), sc);
+                break;
+            case "searchid":
+                long id2 = Long.parseLong(sc.nextLine());
+                System.out.println(service.search(id2));
+                break;
+            case "searchname":
+                String name = sc.nextLine();
+                System.out.println(service.search(name));
+                break;
+            case "searchdep":
+                Department dep = Department.valueOf(sc.nextLine());
+                System.out.println(service.search(dep));
+                break;
+
+        }
+    }
+
     public void add(Employee employee) {
-        boolean exists = false;
         for (Employee item : employees) {
             if (item.getId() == employee.getId()) {
-                exists = true;
-                break;
+                throw new IllegalArgumentException("Employee with such id exists");
             }
         }
-
-        if (!exists) {
-            employees.add(employee);
-        } else {
-            System.out.println("Employee with id " + employee.getId() + " already exists in our DB");
-        }
+        employees.add(employee);
     }
 }
