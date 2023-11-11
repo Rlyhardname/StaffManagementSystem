@@ -24,10 +24,16 @@ public class ReaderCSV implements CustomReader {
                 if (employee != null) {
                     employees.add(employee);
                 }
-                //   System.out.println(line);
+
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
 
         return employees;
