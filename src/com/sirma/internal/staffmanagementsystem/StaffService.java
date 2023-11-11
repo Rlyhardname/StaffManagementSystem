@@ -1,12 +1,15 @@
 package com.sirma.internal.staffmanagementsystem;
 
 public class StaffService implements Service {
-    private CustomReader reader;
-    private CustomWriter writer;
+    private final CustomReader reader;
+    private final CustomWriter writer;
+    private final String URI;
 
-    public StaffService(CustomReader reader, CustomWriter writer) {
+
+    public StaffService(CustomReader reader, CustomWriter writer, String URI) {
         this.reader = reader;
         this.writer = writer;
+        this.URI = URI;
     }
 
     public CustomReader getReader() {
@@ -16,4 +19,25 @@ public class StaffService implements Service {
     public CustomWriter getWriter() {
         return writer;
     }
+
+    public String getURI() {
+        return URI;
+    }
+
+    @Override
+    public Employee search(int id) {
+        return null;
+    }
+
+    @Override
+    public Employee search(String name) {
+        return null;
+    }
+
+    @Override
+    public Employee search(Department department) {
+        return null;
+    }
+
+
 }
