@@ -10,9 +10,11 @@ public interface Manager {
 
     void addEmployee(Employee employee);
 
-    void editEmployee(int id, Scanner sc);
+    void editEmployee(long id, Scanner sc);
 
-    void fireEmployee(int id);
+    void fireEmployee(long id);
 
     void listEmployees();
+
+    void execute(String command, Scanner sc);
 }
