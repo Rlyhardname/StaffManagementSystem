@@ -5,7 +5,7 @@ import com.sirma.internal.staffmanagementsystem.management.enums.Department;
 
 public interface Service {
 
-    Employee search(int id);
+    Employee search(long id);
 
     Employee search(String name);
 
