@@ -107,7 +107,11 @@ public class StaffManager implements Manager {
                         "                                \"Strategic_business(s), IT(i), Logistics(l), Customer_Support(c)\", role, salary");
                 String[] data = sc.nextLine().split(",");
                 Employee addEmployee = EmpUtil.parseEntry(data);
-                add(addEmployee);
+                try {
+                    add(addEmployee);
+                } catch (IllegalArgumentException e) {
+
+                }
                 break;
             case "list":
                 listEmployees();
@@ -122,21 +126,40 @@ public class StaffManager implements Manager {
                 break;
             case "searchid":
                 long id2 = Long.parseLong(sc.nextLine());
-                System.out.println(service.search(id2));
+                System.out.println(search(id2));
                 break;
             case "searchname":
                 String name = sc.nextLine();
-                System.out.println(service.search(name));
+                System.out.println(search(name));
                 break;
             case "searchdep":
                 Department dep = Department.valueOf(sc.nextLine());
-                System.out.println(service.search(dep));
+                System.out.println(search(dep));
                 break;
 
         }
     }
 
+    @Override
+    public Employee search(long id) {
+        // no time to implement... foreach argument = id return employee same with other 2 methods
+        return null;
+    }
+
+    @Override
+    public Employee search(String name) {
+        // no time to implement... foreach argument = name return employee
+        return null;
+    }
+
+    @Override
+    public Employee search(Department department) {
+        // no time to implement... foreach argument = department return employee
+        return null;
+    }
+
     public void add(Employee employee) {
+
         for (Employee item : employees) {
             if (item.getId() == employee.getId()) {
                 throw new IllegalArgumentException("Employee with such id exists");

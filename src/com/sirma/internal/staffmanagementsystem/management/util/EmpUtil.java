@@ -29,6 +29,6 @@ public class EmpUtil {
             return null;
         }
 
-        return new com.sirma.internal.staffmanagementsystem.management.model.Employee(id, name, startDate, endDate, department, role, salary);
+        return new Employee(id, name, startDate, endDate, department, role, salary);
     }
 }

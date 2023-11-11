@@ -29,20 +29,4 @@ public class StaffService implements Service {
         return URI;
     }
 
-    @Override
-    public Employee search(long id) {
-        return null;
-    }
-
-    @Override
-    public Employee search(String name) {
-        return null;
-    }
-
-    @Override
-    public Employee search(Department department) {
-        return null;
-    }
-
-
 }
