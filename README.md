@@ -5,10 +5,10 @@ This project involves developing a console-based application in Java, focusing o
 Oriented Programming (OOP) principles. The application will serve as a Staff Management
 System, enabling users to manage employee data for a company.
 ## Key Objectives:
- Implement OOP concepts like encapsulation, inheritance, polymorphism, and
+- Implement OOP concepts like encapsulation, inheritance, polymorphism, and
 abstraction.
- Create a user-friendly console interface.
- Ensure data persistence by reading and writing employee data to/from a CSV/JSON
+- Create a user-friendly console interface.
+* Ensure data persistence by reading and writing employee data to/from a CSV/JSON
 file.
 ## Employee Data Management:
  Add Employee: Input employee details (ID, name, department, role, salary) and
