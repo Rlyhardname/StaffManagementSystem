@@ -11,26 +11,26 @@ abstraction.
 * Ensure data persistence by reading and writing employee data to/from a CSV/JSON
 file.
 ## Employee Data Management:
- Add Employee: Input employee details (ID, name, department, role, salary) and
+- Add Employee: Input employee details (ID, name, department, role, salary) and
 add them to the system.
- Edit Employee: Modify existing employee details.
- Fire Employee: Flag that the employee doesn’t work at the company anymore.
- List Employees: Display a list of all active employees with their details.
+- Edit Employee: Modify existing employee details.
+- Fire Employee: Flag that the employee doesn’t work at the company anymore.
+- List Employees: Display a list of all active employees with their details.
 ## Data Persistence:
- Read Data: Initialize the system with employee data from a CSV/JSON file.
- Write Data: Save current employee data to a CSV/JSON file upon exit.
- Search Functionality: Search for employees by name, ID, or department.
+- Read Data: Initialize the system with employee data from a CSV/JSON file.
+- Write Data: Save current employee data to a CSV/JSON file upon exit.
+- Search Functionality: Search for employees by name, ID, or department.
 ## Technical Requirements:
- Employee and other relevant classes encapsulating respective properties and
+- Employee and other relevant classes encapsulating respective properties and
 methods.
- Define interfaces for common functionalities.
- Use abstract classes where appropriate.
+- Define interfaces for common functionalities.
+- Use abstract classes where appropriate.
 ## File Handling:
- Implement CSV/JSON file operations for data persistence.
+- Implement CSV/JSON file operations for data persistence.
 ## Exception Handling:
- Robust error and exception management for user inputs and file operations.
+- Robust error and exception management for user inputs and file operations.
 Data Structures:
- Use appropriate collections (like Lists, Maps) to manage and organize data.
+- Use appropriate collections (like Lists, Maps) to manage and organize data.
 ## Documentation:
- Comprehensive documentation of classes, methods, and logic flow.
- Source Code: Well-organized and commented Java source files.
+- Comprehensive documentation of classes, methods, and logic flow.
+- Source Code: Well-organized and commented Java source files.
